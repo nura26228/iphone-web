@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldClock</title>
+    <link href="wc.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"><img src="BG.png"></div>      
+    <div class="screen1">
+        <img src="worldclockback.png">
+    </div>
+
+    <p id="timee" class="time">time</p>
+    <h1>World Clock</h1>
+
+    <div class="timezones">
+        <div class="Astana">
+            <hr>
+            <div class="AstanaP">
+                <p id="time_astana_day" class="tm">err!(day)</p>
+            </div>
+            <h2>Astana</h2>
+        </div>
+
+        <div class="Moscow">
+            <hr>
+            <div class="MoscowP">
+                <p id="time_moscow_day" class="tm">err!(day)</p>  
+            </div>
+            <h2>Moscow</h2>
+        </div>
+        
+        <div class="New-York">
+            <hr>
+            <div class="NYP">
+                <p id="time_ny_day" class="tm">err!(day)</p>
+            </div>
+            <h2>New York</h2>
+        </div>
+
+        <div class="London">
+            <hr>
+            <div class="LondonP">
+                <p id="time_lond_day" class="tm">err!(day)</p>
+            </div>
+            <h2>London</h2>
+        </div>
+
+        <div class="Paris">
+           <hr>
+            <div class="ParisP">
+                <p id="time_paris_day" class="tm">err!(day)</p>
+            </div>
+            <h2>Paris</h2>
+        </div>
+
+        <div class="Tokyo">
+            <hr>
+            <div class="TokyoP">
+                <p id="time_tokyo_day" class="tm">err!(day)</p>
+            </div>
+            <h2>Tokyo</h2>
+        </div>
+    </div>
+
+    <div class="timeAbsolute">
+        <p id="time_astana" class="time1">00:00</p>
+        <p id="time_moscow" class="time2">00:00</p>
+        <p id="time_ny" class="time3">00:00</p>
+        <p id="time_lond" class="time4">00:00</p>
+        <p id="time_paris" class="time5">00:00</p>
+        <p id="time_tokyo" class="time6">00:00</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+         function getTime(city_name, id_name, iddd){
+             let data_today = new Date()
+             day_today = data_today.getDate()
+             // console.log(day_today) 
+             let p_name = document.getElementById(id_name)
+             let p_day = document.getElementById(id_name+"_day")
+             var request = new XMLHttpRequest()
+             request.open("GET", "https://worldtimeapi.org/api/timezone/" + city_name)
+             request.onload = function () {
+                 let answ = JSON.parse(request.responseText)
+                 let date = answ.datetime
+                 //console.log(date)   //2023-03-28T09:02:39.219003-04:00
+ 
+                 let forSplit = date.split("T") 
+                 let dt = forSplit[0].split("-")
+                 //[0]-2023-03-28  //[1]-09:02:39.219003-04:00
+                 let forSplit1 = forSplit[1].split(".") 
+                 //[0]-09:02:39  //[1]-219003-04:00
+                 let time = forSplit1[0].split(":")
+ 
+                 if(day_today == dt[2]) p_day.textContent = "Today"
+                 else if(day_today > dt[2]) p_day.textContent = "Yesterday"
+                 else p_day.textContent = "Towmorrow"
+                 
+                 p_name.textContent = time[0] + ":" + time[1]
+                 p_date.textContent = dt[2] + "/" + dt[1]
+             }
+             request.send()
+         }
+         function getTime2(city_name, id_name){
+             let data_today = new Date()
+             day_today = data_today.getDate()
+             // console.log(day_today) 
+             let p_name = document.getElementById(id_name)
+             let request = new XMLHttpRequest()
+             request.open("GET", "https://worldtimeapi.org/api/timezone/" + city_name)
+             request.onload = function () {
+                 let answ = JSON.parse(request.responseText)
+                 let date = answ.datetime
+
+                 //console.log(date)   //2023-03-28T09:02:39.219003-04:00
+ 
+                 let forSplit = date.split("T") 
+                 let dt = forSplit[0].split("-")
+                 //[0]-2023-03-28  //[1]-09:02:39.219003-04:00
+                 let forSplit1 = forSplit[1].split(".") 
+                 //[0]-09:02:39  //[1]-219003-04:00
+                 let time = forSplit1[0].split(":")
+
+                 p_name.textContent = time[0] + ":" + time[1]
+             }
+             request.send()
+         }
+         setInterval(() => {
+             getTime("Asia/Almaty", "time_astana", "time_astana_utc")
+             getTime2("Asia/Almaty", "timee")
+             getTime("Europe/Moscow", "time_moscow")
+             getTime("America/New_York", "time_ny")
+             getTime("Europe/London", "time_lond")
+             getTime("Europe/Paris", "time_paris")
+             getTime("Asia/Tokyo", "time_tokyo")
+         }, 900)
+     </script>
+
+    <div class="iphone_button"><button><a href="../main.html"><img src="../home_button/black.png"></a></div></button>
+</body>
+</html>

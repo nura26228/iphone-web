@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select:none;
+}
+
+.screen1 img{
+    position: absolute;
+    padding-left: 40%;
+    padding-top: 5%;
+    width: 60%;
+    z-index: -1;
+    user-select:none;
+}
+
+.time {
+    color: white;
+    margin-left: 44%;
+    padding-top: 7.2%;
+    font-size: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: 130%;
+    margin-left: 42.5%;
+    padding-top: 1%;
+}
+
+.timezones {
+    margin-left: 42%;
+    margin-top: 1%;
+}
+ 
+.timezones p {
+    color: gray;
+}
+
+h2 {
+    color: white;
+    font-size: 120%;
+}
+
+.AstanaP {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5em;
+}
+
+.MoscowP {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.3em;
+}
+
+.NYP {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.3em;
+}
+
+.LondonP {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.3em;
+}
+
+.ParisP {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.3em;
+}
+
+.TokyoP {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.3em;
+}
+
+hr {
+    width: 28%;
+}
+
+.Astana {
+    margin-bottom: 9px;
+}
+
+.Moscow {
+    margin-bottom: 9px;
+}
+
+.New-York {
+    margin-bottom: 9px;
+}
+
+.London {
+    margin-bottom: 9px;
+}
+
+.Paris {
+    margin-bottom: 9px;
+}
+
+.Tokyo {
+    margin-bottom: 1.7%;
+}
+
+.timeAbsolute {
+    position: absolute;
+    color: white;
+    font-size: 300%;
+    left: 50%;
+    top: 26.4%;
+}
+
+.time1 {
+    margin-bottom: 15%;
+}
+
+.time2 {
+    margin-bottom: 15%;
+}
+
+.time3 {
+    margin-bottom: 15%;
+}
+
+.time4 {
+    margin-bottom: 15%;
+}
+
+.time5 {
+    margin-bottom: 15%;
+}
+
+.iphone_button button {
+    margin-left: 47%;
+    background: transparent;
+    border: 0;
+    position: absolute;
+    top: 81.5%;
+    z-index: 999;
+}

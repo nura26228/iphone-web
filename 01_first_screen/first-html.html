@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="first-css.css" rel="stylesheet">
+    <title>SmartPhone</title>
+</head>
+<body>    
+    <div class="background"><img src="img/BG.png"></div>      
+    <div class="screen1">
+        <a href="../Main/main.html"><img src="img/Group 2.png"></a>
+        <div class="pipi">
+            <p id="dataaa"  style="font-size: 20px;">date</p>
+            <p id="time" style="font-size: 60px;">time</p>
+        </div>
+        <div class="widget">
+            <div class="stoks">
+                <div class="stok">
+                    <b>USD</b>
+                    <div class="d" id="usd-value">00,00 тг.</div>
+                </div>
+                <div class="stok">
+                    <b>EUR</b>
+                    <div class="d" id="eur-value">00,00 тг.</div>
+                </div>
+                <div class="stok">
+                    <b>RUB</b>
+                    <div class="d" id="rub-value">00,00 тг.</div>
+                </div>
+            </div>
+            <div class="rem">
+                <h4 class="name_of_rem">Reminders</h4>
+                <p><b>o</b> JS exam <br>deadline</p>
+            </div>
+        </div>
+    </div>
+    <script src="first-js.js"></script>
+    <script>
+
+var myHeaders = new Headers();
+myHeaders.append("apikey", "B5xwP1fc8lqktWvtsLxlJfwKzKyQOWxo");
+
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+}
+fetch("https://api.apilayer.com/fixer/convert?to=KZT&from=USD&amount=1", requestOptions)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let curren = data.result
+    document.getElementById("usd-value").innerText = curren.toFixed(2) + " ₸"
+    console.log(data.result);
+  })
+.catch(error => console.log('error', error))
+
+fetch("https://api.apilayer.com/fixer/convert?to=KZT&from=EUR&amount=1", requestOptions)
+  .then((response) => {
+    return response.json();
+  })
+    .then((data) => {
+        let curren1 = data.result
+        document.getElementById("eur-value").innerText = curren1.toFixed(2) + " ₸"
+        console.log(data.result);
+    })
+.catch(error => console.log('error', error))
+
+fetch("https://api.apilayer.com/fixer/convert?to=KZT&from=RUB&amount=1", requestOptions)
+  .then((response) => {
+    return response.json();
+  })
+    .then((data) => {
+        let curren2 = data.result
+        document.getElementById("rub-value").innerText = curren2.toFixed(2) + " ₸"
+        console.log(data.result);
+    })
+.catch(error => console.log('error', error))
+    </script>
+</body>
+</html>

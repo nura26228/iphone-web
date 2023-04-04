@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select:none;
+}
+
+.background img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select:none;
+}
+
+.screen1 img{
+    position: absolute;
+    padding-left: 40%;
+    padding-top: 5%;
+    width: 60%;
+    z-index: -1;
+    user-select:none;
+}
+
+.set_budget {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-left: 43.5%;
+    width: 186.470588235;
+    height: 38px;
+    padding-top: 13%;
+}
+
+.set_budget input {
+    background: white;
+    width: 128.823529412px;
+    height: 22.2882352941px;   
+    border: 1px solid #D0D0D0;
+    border-radius: 4px; 
+    margin-right: 10px;
+}
+
+.set_budget button {
+    width: 51.7647058824px;
+    height: 22.3529411765px;
+    background: #0089D0;
+    border-radius: 4px; 
+    border:none;
+    cursor: pointer;
+}
+
+.set_budget button p {
+    color:white;
+    cursor: pointer;
+}
+
+.calculation {
+    color: white;
+    font-size: 12.9411764706px;
+    margin-left: 9%;
+    margin-top: 3.6%;
+}
+
+.calculation p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5%;
+}
+
+.form2 button {
+    background-color: #0089D0;
+    border: none;
+    border-radius: 4px;
+    width: 113.529411765px;
+    height: 13.7647058824px;
+    margin-left: 48.5%;
+    margin-top: 1.5%;
+    cursor: pointer;
+}
+
+.form2 button p {
+    color: white;
+    font-size: 12.94117647060px;
+}
+
+.transactions {
+    display: flex;
+    flex-direction: column;
+    margin-left: 43.3%;
+    margin-top: 0.2%;
+}
+
+.transactions input {
+    width: 193.470588235px;
+    height: 21.1764705882px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    margin-bottom: 1%;
+}
+
+.exp_list {
+    display: flex;
+    flex-direction: row;
+    margin-left: 43.5%;
+    margin-top: 3%;
+}
+
+#line {
+    margin-right: 5.88235294118px;
+    width:3px;
+}
+
+.name {
+    font-size: 11.7647058824px;
+    margin-top: 0.5%;
+    margin-right: 51.1764705882px;
+}
+
+.cost {
+    font-size: 11.7647058824px  ;
+    margin-top: 0.5%;
+    margin-right: 54.7058823529px;
+}
+
+.iphone_button button {
+    margin-left: 47%;
+    margin-top: 4%;
+    background: transparent;
+    border: 0;
+    
+}
+
+.iphone_button button {
+    margin-left: 45%;
+    margin-top: 8.8%;
+    background: transparent;
+    border: 0; 
+}
+
+#trash {
+    background: transparent;    
+    border: none;
+    background: none;
+    cursor: pointer;
+}

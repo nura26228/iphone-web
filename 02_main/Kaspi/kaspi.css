@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select:none;
+}
+
+.background img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select:none;
+}
+
+.screen1 img{
+    position: absolute;
+    padding-left: 40%;
+    padding-top: 5%;
+    width: 60%;
+    z-index: -1;
+    user-select:none;
+}
+
+.pincode_title{
+    font-size: 18px;
+    color: #848484;
+    margin-bottom: 38px;
+    margin-left: 46.5%;
+    margin-top: 65px;
+}
+
+.profile{
+    width: 7%;
+    height: 7%;
+    margin-left: 47.8%;
+    padding-top:11%;
+}
+
+
+
+.pincode_number{
+    justify-content: center;
+    display: flex;
+   flex-direction: column;
+   margin-left: 45.3%;
+   font-size: 38px;
+   margin-top: 101px;
+}
+
+
+.pincode_number_123{
+    display: flex;
+    flex-direction: row;
+}
+
+.pincode_number_456{
+    display: flex;
+    flex-direction: row;
+}
+.pincode_number_789{
+    display: flex;
+    flex-direction: row;
+}
+.pincode_number_footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.pincode_number_123 p {
+    margin-right: 86px;
+    margin-bottom: 49px;
+}
+
+.pincode_number_456 p {
+    margin-right: 86px;
+    margin-bottom: 49px;
+}
+
+.pincode_number_789 p {
+    margin-right: 86px;
+    margin-bottom: 49px;
+}
+
+.pincode_number_footer p {
+    margin-right: 67px ;
+}
+
+.pincode_icon {
+    display: flex;
+    flex-direction: row;
+    margin-left: 47.5%;
+}
+
+.icon1 {
+    margin-right: 25px;
+}
+
+.icon2 {
+    margin-right: 25px;
+}
+
+.icon3 {
+    margin-right: 25px;
+}
+
+.icon4 {
+    margin-right: 25px;
+}
+
+.pincode_number_icon1 {
+    Width: 44px;
+    Height: 44.15px;
+    margin-right: 68px;
+}
+
+.pincode_number_icon2 {
+    height: 30.88311767578125px;
+    width: 41px;
+}
+
+.iphone_button button {
+    margin-left: 47%;
+    margin-top: 4%;
+    background: transparent;
+    border: 0;
+    
+}

@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select:none;
+}
+
+.background img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select:none;
+}
+
+.screen1 img{
+    position: absolute;
+    padding-left: 40%;
+    padding-top: 5%;
+    width: 60%;
+    z-index: -1;
+    user-select:none;
+}
+
+.clocks button{
+    background: transparent;
+    border: 0;
+    margin-right: 20px;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.clock1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.clock2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.clocks img {
+    width: 40px;
+}
+
+.clocks {
+    margin-left: 51%;
+    padding-top: 10%;
+
+}
+
+.aps button{
+    background: transparent;
+    border: 0;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+.aps1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.aps2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aps img {
+    width: 40px;
+}
+
+.aps {
+    margin-left: 42.5%;
+    margin-top: 0.5%;
+}
+
+.utilities button{
+    background: transparent;
+    border: 0;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+.utilities1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.utilities2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.utilities img {
+    width: 40px;
+}
+
+.utilities {
+    margin-left: 51%;
+}
+
+.calendar-wrapper {
+    margin: 3px auto;
+    padding: 2em;
+    border-radius: 5px;
+    background: #0e0d0d;
+    border-radius: 20%;
+    position: absolute;
+    left: 50%;
+    top: 32.5%;
+  }
+
+  table {
+    clear: both;
+    width: 100%;
+    border-radius: 3px;
+    border-collapse: collapse;
+    color: #ffffff;
+    
+  }
+  td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  thead td {
+    border: none;
+    color: #962424;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  td.not-current {
+    color: #c0c0c0;
+    padding-right: 5px;
+    padding-left: 3 px;
+  }
+
+  td.today {
+    font-weight: 700;
+    color: #fff;
+    background-color: #e90606;
+    border-radius: 50%;
+    font-size: 1em;
+  }
+
